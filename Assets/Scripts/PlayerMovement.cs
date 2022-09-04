@@ -31,13 +31,20 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(movementDirection * (speed * Time.deltaTime));
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             isRunning = true;
+            playerAnimator.SetFloat("speed", 1);
         }
         else
         {
             isRunning = false;
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            isRunning = true;
+            playerAnimator.SetFloat("speed", -1.0f);
         }
 
         playerAnimator.SetBool("running", isRunning);
