@@ -6,12 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private float speed = 5.0f;
-    private Rigidbody playerRb;
+    [SerializeField] private float rotationSpeed = 5.0f;
+    private Animator playerAnimator;
+    private bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRb = GetComponent<Rigidbody>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,22 @@ public class PlayerMovement : MonoBehaviour
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
 
-        playerRb.AddForce(new Vector3(-horizontal, 0, -vertical) * (speed * Time.deltaTime), ForceMode.Force);
+        Vector3 movementDirection = new Vector3(0, 0, vertical);
+        movementDirection.Normalize();
+
+        transform.Rotate(0, Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime, 0);
+
+        transform.Translate(movementDirection * (speed * Time.deltaTime));
+
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            isRunning = true;
+        }
+        else
+        {
+            isRunning = false;
+        }
+
+        playerAnimator.SetBool("running", isRunning);
     }
 }

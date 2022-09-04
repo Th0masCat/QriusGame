@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public GameObject player;      
-    private Vector3 offset;            
+    private Vector3 offset;
 
     void Start()
     {
@@ -15,6 +15,7 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         transform.position = player.transform.position + offset;
+        transform.rotation = player.transform.rotation;
     }
 
 }
