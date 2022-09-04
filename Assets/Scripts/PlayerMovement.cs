@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed = 5.0f;
     private Animator playerAnimator;
     private bool isRunning = false;
+    private Rigidbody playerRb;
 
     // Start is called before the first frame update
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
+        playerRb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(movementDirection * (speed * Time.deltaTime));
 
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             isRunning = true;
         }

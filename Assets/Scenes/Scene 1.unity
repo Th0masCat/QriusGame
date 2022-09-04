@@ -23,10 +23,10 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 1.5
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44664782, g: 0.49649352, b: 0.57486135, a: 1}
+  m_IndirectSpecularColor: {r: 0.1651937, g: 0.18197128, b: 0.33108, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 108454914}
   - component: {fileID: 108454913}
   m_Layer: 0
-  m_Name: Camera (1)
+  m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,9 +1477,9 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.90961653, b: 0.745283, a: 1}
+  m_Color: {r: 0.43529415, g: 0.21176472, b: 0.36862746, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 102.38
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1535,14 +1535,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315136619}
-  m_LocalRotation: {x: 0.29130033, y: -0.654909, z: 0.30399895, w: 0.62755316}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.62153155, y: -0.6177832, z: -0.036550675, w: 0.48031923}
+  m_LocalPosition: {x: 20.75, y: 12.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 49.800003, y: -92.44401, z: 0}
+  m_LocalEulerAnglesHint: {x: 146.502, y: 50.009995, z: 105.634}
 --- !u!1001 &327231632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3842,7 +3842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cf5008b235a464ba5e5ac597061c0e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.35102445
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cf5008b235a464ba5e5ac597061c0e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3850,11 +3850,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cf5008b235a464ba5e5ac597061c0e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.93636626
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cf5008b235a464ba5e5ac597061c0e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cf5008b235a464ba5e5ac597061c0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3862,7 +3862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cf5008b235a464ba5e5ac597061c0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 221.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2cf5008b235a464ba5e5ac597061c0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3941,9 +3941,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 4.8376813
+  m_Height: 4.9002194
   m_Direction: 1
-  m_Center: {x: 0, y: 1.6437724, z: 0}
+  m_Center: {x: 0, y: 1.6125001, z: 0}
 --- !u!54 &1041367817
 Rigidbody:
   m_ObjectHideFlags: 0
