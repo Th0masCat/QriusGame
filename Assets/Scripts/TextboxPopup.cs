@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class TextboxPopup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject textboxPopup;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            textboxPopup.SetActive(true);
+        }
     }
 }
