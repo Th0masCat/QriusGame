@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float rotationSpeed = 5.0f;
+    [SerializeField] private float jumpForce = 8.0f;
+
     private Animator playerAnimator;
     private bool isRunning = false;
     private Rigidbody playerRb;
@@ -30,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(movementDirection * (speed * Time.deltaTime));
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+
+
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             isRunning = true;
@@ -48,4 +56,5 @@ public class PlayerMovement : MonoBehaviour
 
         playerAnimator.SetBool("running", isRunning);
     }
+
 }
