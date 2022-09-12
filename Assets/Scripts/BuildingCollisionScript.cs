@@ -9,7 +9,7 @@ public class BuildingCollisionScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
+            SceneManager.LoadScene(1);
         }
     }
 }
