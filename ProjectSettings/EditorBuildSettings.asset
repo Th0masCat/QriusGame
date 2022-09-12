@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene 1.unity
     guid: 5e7af4bd95ac53a4cb784a9eedf8f6f9
-  - enabled: 0
-    path: Assets/Scenes/TempScene.unity
-    guid: c35904620f9c5fc46a18dbb4ee344815
   - enabled: 1
     path: Assets/Scenes/MonsterFight.unity
     guid: 814313c20d50a3348b617cc7d4f1ff14
