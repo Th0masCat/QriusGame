@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\DataTypes\DataTypes.cs" />
     <Compile Include="Assets\Scripts\TextboxPopup.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Unit.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\WEBGL\CoreWebGlPlugin.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\Prefabs\IngameControlBehavior.cs" />
