@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed = 5.0f;
     [SerializeField] private float jumpForce = 8.0f;
 
+    private bool isOnGround;
     private Animator playerAnimator;
     private bool isRunning = false;
     private Rigidbody playerRb;
@@ -33,11 +34,15 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(movementDirection * (speed * Time.deltaTime));
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isOnGround = false;
         }
 
+        if(playerRb.velocity.y == 0) { 
+            isOnGround = true; 
+        }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
