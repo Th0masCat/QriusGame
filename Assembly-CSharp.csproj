@@ -71,8 +71,8 @@
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\Prefabs\IngameControlBehavior.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\DispatchSystem\WebGlDispatcher.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Demo\PluginShowcase\Assets\Scripts\DemoPlayerPrefsSaveFile.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
+    <Compile Include="Assets\Resources\RepulseWebGL Tools\Demo\PluginShowcase\Assets\Scripts\DemoPlayerPrefsSaveFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
