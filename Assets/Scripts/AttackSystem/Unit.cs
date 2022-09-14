@@ -1,18 +1,32 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public int maxHP;
+	public int currentHP;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public string unitName;
+	public int unitLevel;
+
+	public int damage;
+
+	public bool TakeDamage(int dmg)
+	{
+		currentHP -= dmg;
+
+		if (currentHP <= 0)
+			return true;
+		else
+			return false;
+	}
+
+	public void Heal(int amount)
+	{
+		currentHP += amount;
+		if (currentHP > maxHP)
+			currentHP = maxHP;
+	}
+
 }

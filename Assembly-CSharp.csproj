@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\Plugins\GetAllFunctions.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\BattleHUD.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Demo\PluginShowcase\Assets\Scripts\DemoFunctionallity.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\WEBGL\RepulseWebGlTool.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Assets\Resources\RepulseWebGL Tools\DataTypes\DataTypes.cs" />
     <Compile Include="Assets\Scripts\TextboxPopup.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\Unit.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\BattleSystem.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\WEBGL\CoreWebGlPlugin.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\Prefabs\IngameControlBehavior.cs" />
