@@ -11,7 +11,6 @@ public class Unit : MonoBehaviour
 	public int unitLevel;
 
 	public int damage;
-
 	public bool TakeDamage(int dmg)
 	{
 		currentHP -= dmg;
@@ -21,7 +20,6 @@ public class Unit : MonoBehaviour
 		else
 			return false;
 	}
-
 	public void Heal(int amount)
 	{
 		currentHP += amount;
