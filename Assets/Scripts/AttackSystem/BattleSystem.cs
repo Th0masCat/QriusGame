@@ -27,6 +27,8 @@ public class BattleSystem : MonoBehaviour
 	
 	public BattleState state;
 
+	private Animator enemyAnim;
+
     void Start()
     {
 		state = BattleState.START;
@@ -38,6 +40,7 @@ public class BattleSystem : MonoBehaviour
 		
 		playerUnit = playerPrefab.GetComponent<Unit>();
 		enemyUnit = enemyPrefab.GetComponent<Unit>();
+		enemyAnim = enemyPrefab.GetComponent<Animator>();
 
 		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
 		
@@ -76,7 +79,9 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator EnemyTurn()
 	{
+		combatButtons.SetActive(false);
 		dialogueText.text = enemyUnit.unitName + " attacks!";
+		enemyAnim.SetTrigger("Attack 01");
 
 		yield return new WaitForSeconds(1f);
 
