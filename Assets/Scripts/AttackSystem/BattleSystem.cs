@@ -9,6 +9,7 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, DRAW }
 public class BattleSystem : MonoBehaviour
 {
 	public QuizManager quiz;
+	public GameObject combatButtons;
 
 	Unit playerUnit;
 	Unit enemyUnit;
@@ -26,7 +27,6 @@ public class BattleSystem : MonoBehaviour
 	
 	public BattleState state;
 
-    // Start is called before the first frame update
     void Start()
     {
 		state = BattleState.START;
@@ -125,6 +125,7 @@ public class BattleSystem : MonoBehaviour
 
 		yield return new WaitForSeconds(1f);
 
+		combatButtons.SetActive(true);
 		quiz.SetCurrentQuestion();
 	}
 

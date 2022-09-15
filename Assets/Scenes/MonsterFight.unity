@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quiz: {fileID: 1582796165}
+  combatButtons: {fileID: 201211623}
   playerBattleStation: {fileID: 1558023335}
   enemyBattleStation: {fileID: 862433261}
   playerHUD: {fileID: 1738946909}
@@ -363,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &201211624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3145,17 +3146,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4095ff4b3e024468e1f4e9e3fd9cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonText:
+  - {fileID: 1309758825}
+  - {fileID: 1964750266}
+  - {fileID: 1238960826}
+  - {fileID: 1097492973}
   questions:
   - question: 1
     correctOption: 1
+    options:
+    - hi
+    - jo
+    - da
+    - kw
   - question: 2
     correctOption: 2
+    options:
+    - sda
+    - sQDQW
+    - DSADASD
+    - DSQAD
   - question: 3
     correctOption: 3
+    options:
+    - DSADAD
+    - sdadad
+    - W12WE
+    - sfsafa
   unansweredQuestions: []
   currentQuestion:
     question: 
     correctOption: 0
+    options: []
   questionText: {fileID: 756297257}
   questionCount: 0
 --- !u!4 &1582796166

@@ -7,4 +7,5 @@ public class Quiz
 {
     public string question;
     public int correctOption;
+    public string[] options;
 }
