@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, DRAW }
 
 public class BattleSystem : MonoBehaviour
 {
+	public QuizManager quiz;
+
 	Unit playerUnit;
 	Unit enemyUnit;
 
@@ -33,21 +35,19 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator SetupBattle()
 	{
-		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-		playerUnit = playerGO.GetComponent<Unit>();
-
-		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-		enemyUnit = enemyGO.GetComponent<Unit>();
+		
+		playerUnit = playerPrefab.GetComponent<Unit>();
+		enemyUnit = enemyPrefab.GetComponent<Unit>();
 
 		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
-
+		
 		playerHUD.SetHUD(playerUnit);
 		enemyHUD.SetHUD(enemyUnit);
 
 		yield return new WaitForSeconds(2f);
 
 		state = BattleState.PLAYERTURN;
-		PlayerTurn();
+		StartCoroutine(PlayerTurn());
 	}
 
 	IEnumerator PlayerAttack()
@@ -63,7 +63,11 @@ public class BattleSystem : MonoBehaviour
 		{
 			state = BattleState.WON;
 			EndBattle();
-		} else
+		} else if (quiz.questionCount == quiz.unansweredQuestions.Count)
+        {
+			state = BattleState.DRAW;
+			EndBattle();
+        }else
 		{
 			state = BattleState.ENEMYTURN;
 			StartCoroutine(EnemyTurn());
@@ -86,10 +90,16 @@ public class BattleSystem : MonoBehaviour
 		{
 			state = BattleState.LOST;
 			EndBattle();
-		} else
+		}
+		else if (quiz.questionCount == quiz.unansweredQuestions.Count)
+		{
+			state = BattleState.DRAW;
+			EndBattle();
+		}
+		else
 		{
 			state = BattleState.PLAYERTURN;
-			PlayerTurn();
+		    StartCoroutine(PlayerTurn());
 		}
 
 	}
@@ -102,21 +112,28 @@ public class BattleSystem : MonoBehaviour
 		} else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "You were defeated.";
+		} else if(state == BattleState.DRAW)
+        {
+			dialogueText.text = "Draw";
 		}
 		SceneManager.LoadScene(0);
 	}
 
-	void PlayerTurn()
+	IEnumerator PlayerTurn()
 	{
-		dialogueText.text = "Choose an action:";
+		dialogueText.text = "Choose an option:";
+
+		yield return new WaitForSeconds(1f);
+
+		quiz.SetCurrentQuestion();
 	}
 
-	IEnumerator PlayerHeal()
+	IEnumerator IncorrectOption()
 	{
-		playerUnit.Heal(5);
+		playerUnit.TakeDamage(5);
 
 		playerHUD.SetHP(playerUnit.currentHP);
-		dialogueText.text = "You feel renewed strength!";
+		dialogueText.text = "Wrong Answer!";
 
 		yield return new WaitForSeconds(2f);
 
@@ -124,20 +141,74 @@ public class BattleSystem : MonoBehaviour
 		StartCoroutine(EnemyTurn());
 	}
 
-	public void OnAttackButton()
+
+
+	public void Button1()
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
 
-		StartCoroutine(PlayerAttack());
+		if (quiz.currentQuestion.correctOption == 1)
+		{
+			StartCoroutine(PlayerAttack());
+			Debug.Log("True");
+		}
+		else
+		{
+			Debug.Log("Incorrect");
+			StartCoroutine(IncorrectOption());
+		}
 	}
 
-	public void OnHealButton()
+	public void Button2()
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
 
-		StartCoroutine(PlayerHeal());
+		if (quiz.currentQuestion.correctOption == 2)
+		{
+			StartCoroutine(PlayerAttack());
+			Debug.Log("True");
+		}
+		else
+		{
+			Debug.Log("Incorrect");
+			StartCoroutine(IncorrectOption());
+		}
+	}
+
+	public void Button3()
+	{
+		if (state != BattleState.PLAYERTURN)
+			return;
+
+		if (quiz.currentQuestion.correctOption == 3)
+		{
+			StartCoroutine(PlayerAttack());
+			Debug.Log("True");
+		}
+		else
+		{
+			Debug.Log("Incorrect");
+			StartCoroutine(IncorrectOption());
+		}
+	}
+
+	public void Button4()
+	{
+		if (state != BattleState.PLAYERTURN)
+			return;
+
+		if (quiz.currentQuestion.correctOption == 4)
+		{
+			StartCoroutine(PlayerAttack());
+			Debug.Log("True");
+		}
+		else
+		{
+			Debug.Log("Incorrect");
+			StartCoroutine(IncorrectOption());
+		}
 	}
 
 }

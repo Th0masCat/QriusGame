@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\DataTypes\DataTypes.cs" />
     <Compile Include="Assets\Scripts\TextboxPopup.cs" />
+    <Compile Include="Assets\Scripts\Quiz\Quiz.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\Unit.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\BattleSystem.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\WEBGL\CoreWebGlPlugin.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\DispatchSystem\WebGlDispatcher.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
     <Compile Include="Assets\Resources\RepulseWebGL Tools\Demo\PluginShowcase\Assets\Scripts\DemoPlayerPrefsSaveFile.cs" />
+    <Compile Include="Assets\Scripts\Quiz\QuizManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
