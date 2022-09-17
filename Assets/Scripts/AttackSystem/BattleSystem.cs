@@ -14,6 +14,8 @@ public class BattleSystem : MonoBehaviour
 	Unit playerUnit;
 	Unit enemyUnit;
 
+	public GameObject imageFlash;
+
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
 
@@ -80,6 +82,12 @@ public class BattleSystem : MonoBehaviour
 	{
 		enemyAnimator.SetTrigger("Attack 01");
 		combatButtons.SetActive(false);
+
+		imageFlash.SetActive(true);
+		yield return new WaitForSeconds(0.5f);
+
+		imageFlash.SetActive(false);
+
 		dialogueText.text = enemyUnit.unitName + " attacks!";
 
 		yield return new WaitForSeconds(1f);
