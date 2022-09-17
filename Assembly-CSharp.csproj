@@ -56,28 +56,19 @@
     <Analyzer Include="D:\Unity\VSCode\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Resources\Plugins\GetAllFunctions.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\BattleHUD.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Demo\PluginShowcase\Assets\Scripts\DemoFunctionallity.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\WEBGL\RepulseWebGlTool.cs" />
     <Compile Include="Assets\Scripts\BuildingCollisionScript.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Demo\PluginShowcase\Assets\Scripts\MaxInput.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\DataTypes\DataTypes.cs" />
     <Compile Include="Assets\Scripts\Quiz\QuizManager.cs" />
     <Compile Include="Assets\Scripts\TextboxPopup.cs" />
     <Compile Include="Assets\Scripts\Quiz\Quiz.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\Unit.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\BattleSystem.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\WEBGL\CoreWebGlPlugin.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\Prefabs\IngameControlBehavior.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Scripts\Repulse\DispatchSystem\WebGlDispatcher.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
-    <Compile Include="Assets\Resources\RepulseWebGL Tools\Demo\PluginShowcase\Assets\Scripts\DemoPlayerPrefsSaveFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -87,7 +78,6 @@
     <None Include="Assets\NPCCharacters\Posed Background Characters by @Quaternius\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Resources\Plugins\EncryptionLibrary.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -343,9 +333,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\Unity\2022.1.16f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="EncryptionLibrary">
-      <HintPath>Assets\Resources\Plugins\EncryptionLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonsterFight.unity
     guid: 814313c20d50a3348b617cc7d4f1ff14
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 3d48e919c9cd5e94281a977bcf5dae6e
   m_configObjects: {}

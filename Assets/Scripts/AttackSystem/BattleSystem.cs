@@ -27,6 +27,8 @@ public class BattleSystem : MonoBehaviour
 	
 	public BattleState state;
 
+	[SerializeField] Animator enemyAnimator;
+
     void Start()
     {
 		state = BattleState.START;
@@ -62,11 +64,11 @@ public class BattleSystem : MonoBehaviour
 		if(isDead)
 		{
 			state = BattleState.WON;
-			EndBattle();
+			StartCoroutine(EndBattle());
 		} else if (quiz.questionCount == quiz.unansweredQuestions.Count)
         {
 			state = BattleState.DRAW;
-			EndBattle();
+			StartCoroutine(EndBattle());
         }else
 		{
 			state = BattleState.ENEMYTURN;
@@ -76,6 +78,8 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator EnemyTurn()
 	{
+		enemyAnimator.SetTrigger("Attack 01");
+		combatButtons.SetActive(false);
 		dialogueText.text = enemyUnit.unitName + " attacks!";
 
 		yield return new WaitForSeconds(1f);
@@ -89,12 +93,12 @@ public class BattleSystem : MonoBehaviour
 		if(isDead)
 		{
 			state = BattleState.LOST;
-			EndBattle();
+			StartCoroutine(EndBattle());
 		}
 		else if (quiz.questionCount == quiz.unansweredQuestions.Count)
 		{
 			state = BattleState.DRAW;
-			EndBattle();
+			StartCoroutine(EndBattle());
 		}
 		else
 		{
@@ -104,7 +108,7 @@ public class BattleSystem : MonoBehaviour
 
 	}
 
-	void EndBattle()
+	IEnumerator EndBattle()
 	{
 		if(state == BattleState.WON)
 		{
@@ -116,7 +120,9 @@ public class BattleSystem : MonoBehaviour
         {
 			dialogueText.text = "Draw";
 		}
-		SceneManager.LoadScene(0);
+
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene(2);
 	}
 
 	IEnumerator PlayerTurn()

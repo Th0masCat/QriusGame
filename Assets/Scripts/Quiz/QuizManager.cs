@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
 {
-    
     public Text[] buttonText;
     public Quiz[] questions;
     public List<Quiz> unansweredQuestions;

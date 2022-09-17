@@ -177,6 +177,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1611152191}
   dialogueText: {fileID: 756297257}
   state: 0
+  enemyAnimator: {fileID: 1611152193}
 --- !u!1001 &64042499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3384,6 +3385,11 @@ MonoBehaviour:
   unitName: Monster
   unitLevel: 5
   damage: 5
+--- !u!95 &1611152193 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95206688057043068, guid: 128a80094e00bf34fa2555766a7eea0e, type: 3}
+  m_PrefabInstance: {fileID: 1611152190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1618195236
 PrefabInstance:
   m_ObjectHideFlags: 0
