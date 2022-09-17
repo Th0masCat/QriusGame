@@ -6,8 +6,6 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-
-	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI dialogueText;
 
 	public Animator animator;
@@ -23,8 +21,6 @@ public class DialogueManager : MonoBehaviour
 	public void StartDialogue(Dialogue dialogue)
 	{
 		animator.SetBool("IsOpen", true);
-
-		nameText.text = dialogue.name;
 
 		sentences.Clear();
 
