@@ -17,7 +17,10 @@ public class TextboxPopup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            npcAnim.SetTrigger("BagAnim");
+            if(npcAnim != null) {
+                npcAnim.SetTrigger("BagAnim"); 
+            }
+            
             dialogueTrigger.TriggerDialogue();
         }
     }
