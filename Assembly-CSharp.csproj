@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\AttackSystem\BattleSystem.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
+    <Compile Include="Assets\Scripts\DisappearOnTouch.cs" />
+    <Compile Include="Assets\Scripts\OnDialogueFinish.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

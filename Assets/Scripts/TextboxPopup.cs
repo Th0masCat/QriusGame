@@ -11,7 +11,11 @@ public class TextboxPopup : MonoBehaviour
     private void Start()
     {
         dialogueTrigger = GetComponent<DialogueTrigger>();
-        npcAnim = GetComponent<Animator>();
+
+        if(TryGetComponent<Animator>(out Animator animator)){
+            npcAnim = animator;
+        }
+
         boxCollider = GetComponent<BoxCollider>();
     }
 
@@ -19,7 +23,10 @@ public class TextboxPopup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            npcAnim.SetTrigger("BagAnim");          
+            if (npcAnim)
+            {
+                npcAnim.SetTrigger("BagAnim");
+            }
             dialogueTrigger.TriggerDialogue();
             boxCollider.enabled = false;
         }

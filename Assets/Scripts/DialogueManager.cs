@@ -10,7 +10,9 @@ public class DialogueManager : MonoBehaviour
 
 	public Animator animator;
 
-	private Queue<string> sentences;
+	public Queue<string> sentences;
+
+	public bool changeScene = false;
 
 	// Use this for initialization
 	void Start()
@@ -57,6 +59,7 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
+		changeScene = true;
 		animator.SetBool("IsOpen", false);
 	}
 
