@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AttackSystem\BattleHUD.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\DisappearOnTouch.cs" />
     <Compile Include="Assets\Scripts\BuildingCollisionScript.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -67,10 +68,10 @@
     <Compile Include="Assets\Scripts\Quiz\Quiz.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\Unit.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\BattleSystem.cs" />
+    <Compile Include="Assets\Scripts\OnDialogueFinish.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
-    <Compile Include="Assets\Scripts\DisappearOnTouch.cs" />
-    <Compile Include="Assets\Scripts\OnDialogueFinish.cs" />
+    <Compile Include="Assets\Scripts\VideoPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

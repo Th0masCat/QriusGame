@@ -31,4 +31,5 @@ public class TextboxPopup : MonoBehaviour
             boxCollider.enabled = false;
         }
     }
+
 }
