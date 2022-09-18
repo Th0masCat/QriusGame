@@ -3256,7 +3256,7 @@ MonoBehaviour:
     - 'Headache '
     - Cough/cold
   - question: 'What will you do if you miss a period? '
-    correctOption: 3
+    correctOption: 2
     options:
     - 'Panic '
     - Talk to a doctor

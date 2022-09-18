@@ -68891,7 +68891,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Teacher Dialogue
+    - Hey! I noticed that you chose to hide your periods from everyone. That's not
+      the correct approach.
+    - You should talk to a trusted adult about your periods whenever you don't know
+      what to do.
+    - It can be your parents, grandparents, teachers or any other guardian figure
+      you're comfortable with.
 --- !u!65 &1656936958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72912,7 +72917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next->
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b22aecfb29fd8d44e9552ac9afc9f9fb, type: 2}
   m_sharedMaterial: {fileID: -1911831275430285350, guid: b22aecfb29fd8d44e9552ac9afc9f9fb, type: 2}
@@ -72939,8 +72944,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5.8
-  m_fontSizeBase: 5.8
+  m_fontSize: 7.71
+  m_fontSizeBase: 7.71
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

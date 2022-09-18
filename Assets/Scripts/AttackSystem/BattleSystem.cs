@@ -44,7 +44,9 @@ public class BattleSystem : MonoBehaviour
 		enemyUnit = enemyPrefab.GetComponent<Unit>();
 
 		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
-		
+		yield return new WaitForSeconds(2f);
+		dialogueText.text = "Time to test what you've learn about menstruation.";
+
 		playerHUD.SetHUD(playerUnit);
 		enemyHUD.SetHUD(enemyUnit);
 
@@ -126,7 +128,7 @@ public class BattleSystem : MonoBehaviour
 			dialogueText.text = "You were defeated.";
 		} else if(state == BattleState.DRAW)
         {
-			dialogueText.text = "Draw";
+			dialogueText.text = "Good Job! You got 4/5 answers correct and defeated the Monster!";
 		}
 
 		yield return new WaitForSeconds(2f);
